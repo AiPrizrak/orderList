@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { OrderItem } from '../order/order.model';
+import { OrderItem } from '../order/order';
 
 @Component({
   selector: 'app-order-list',
