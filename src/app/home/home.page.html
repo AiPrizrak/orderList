@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    Please Log In
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="onLogin()" [formGroup]="userForm">
+    <ion-item>
+      <ion-input
+      required 
+      type="email" 
+      placeholder="Email" 
+      [(ngModel)]="userForm.email" 
+      formControlName="email" 
+      name="email">
+    </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input 
+      required 
+      type="password" 
+      placeholder="Password" 
+      [(ngModel)]="userForm.password" 
+      formControlName="password" 
+      name="password">
+    </ion-input>
+    </ion-item>
+    <ion-button color="primary" type="submit" expand="block" [disabled]="!userForm.valid">Log In</ion-button>
+  </form>
+</ion-content>
